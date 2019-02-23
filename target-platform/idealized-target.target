@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="IDEalized">
+    <locations>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.equinox.sdk.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
+            <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
+            <repository location="http://download.eclipse.org/eclipse/updates/4.10"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.epp.logging.aeri.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.wikitext_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.hudson.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.bugzilla_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.java_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.pde_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.git.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.egit.mylyn.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.buildship.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.wst.xml_ui.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.wst.xsl.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.wst.jsdt.feature.feature.group" version="0.0.0"/>
+            <repository location="http://download.eclipse.org/releases/latest"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.egit.mylyn.feature.group" version="0.0.0"/>
+            <repository location="http://download.eclipse.org/egit/updates"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.team.svn.feature.group" version="0.0.0"/>
+            <repository location="http://download.eclipse.org/technology/subversive/4.0/update-site"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.polarion.eclipse.team.svn.connector.svnkit18.feature.group" version="0.0.0"/>
+            <repository location="http://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="tm-feature.feature.group" version="0.0.0"/>
+            <repository location="http://download.eclipse.org/tm4e/snapshots"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="nu.psnet.quickimage.feature.group" version="0.0.0"/>
+            <repository location="http://manu26.manufrog.com/~psnetnu/eclipse/updates"/>
+        </location>
+        <!-- non-p2
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="AnyEditTools.feature.group" version="0.0.0"/>
+            <repository location="http://andrei.gmxhome.de/eclipse/"/>
+        </location>
+        -->
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>
+            <repository location="https://dl.bintray.com/de-jcup/batcheditor"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="de.jcup.basheditor.feature.group" version="0.0.0"/>
+            <repository location="https://dl.bintray.com/de-jcup/basheditor"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="net.sourceforge.javahexeditor.feature.group" version="0.0.0"/>
+            <repository location="http://javahexeditor.sourceforge.net/update"/>
+        </location>
+        <!--
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.dadacoalition.yedit.feature.feature.group" version="0.0.0"/>
+            <repository location="http://dadacoalition.org/yedit"/>
+        </location>
+        -->
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="net.resheim.eclipse.timekeeper.feature.group" version="0.0.0"/>
+            <repository location="https://resheim.net/p2/eclipse-timekeeper"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="com.github.spotbugs.plugin.eclipse.feature.group" version="0.0.0"/>
+            <repository location="https://spotbugs.github.io/eclipse"/>
+        </location>
+    </locations>
+</target>

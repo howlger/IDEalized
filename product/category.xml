@@ -1,0 +1,12 @@
+<site><!-- shown in "Help > Install New Software..." -->
+
+    <category-def name="idealized_ide_recommended" label="IDEalized - IDE recommended">
+        <description>Not required, but recommended general IDE features/plug-ins</description>
+    </category-def>
+
+    <!-- IDE recommended -->
+    <feature id="nu.psnet.quickimage" version="0.0.0">
+        <category name="idealized_ide_recommended" />
+    </feature>
+
+</site>

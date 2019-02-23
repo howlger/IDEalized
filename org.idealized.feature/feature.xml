@@ -1,0 +1,20 @@
+<feature
+      id="org.idealized.feature"
+      label="IDEalized product branding and customization"
+      version="1.0.0.qualifier"
+      provider-name="Holger Voormann">
+
+   <description url="https://github.com/howlger/IDEalized">
+      IDEalized product branding and customization
+   </description>
+
+   <copyright>%copyright</copyright>
+
+   <license url="license.html">%license</license>
+
+   <plugin id="org.idealized.branding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

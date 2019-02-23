@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>idealized</groupId>
+    <artifactId>idealized-product</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>eclipse-repository</packaging>
+    <parent>
+        <groupId>idealized</groupId>
+        <artifactId>idealized</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <add-jre>yes</add-jre>
+        <add-jre.jdk>yes</add-jre.jdk>
+        <add-jre.version>11</add-jre.version>
+        <!--
+         -->
+        <nsis>yes</nsis>
+        <nsis.version>3.03</nsis.version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-p2-repository-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <includeAllDependencies>true</includeAllDependencies>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-p2-director-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <executions>
+                    <execution>
+                        <id>create-products</id>
+                        <goals><goal>materialize-products</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>archive-products</id>
+                        <goals><goal>archive-products</goal></goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <profile>IDEalized</profile>
+                    <formats>
+                        <linux>tar.gz</linux>
+                        <macosx>tar.gz</macosx>
+                        <win32>zip</win32>
+                    </formats>
+                    <products>
+                        <product>
+                            <id>idealized.product</id>
+                            <rootFolders>
+                                <win32></win32>
+                                <linux>idealized</linux>
+                                <macosx>IDEalized.app</macosx>
+                            </rootFolders>
+                            <archiveFileName>idealized_${build-date-yyyy-MM-dd}</archiveFileName>
+                        </product>
+                    </products>
+                </configuration>
+            </plugin>
+            <!--
+            <plugin>
+                <groupId>org.eclipse.cbi.maven.plugins</groupId>
+                <artifactId>eclipse-dmg-packager</artifactId>
+                <version>1.1.5</version>
+            </plugin>
+            -->
+
+            <!-- post-processing -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>product-post-processing</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+
+                            <!-- TODO support environment other than Windows 64 bit -->
+                            <target name="post-processing">
+
+                                <!-- JREs cache: ${settings.localRepository}/.cache/JREs -->
+                                <condition property="skip.add-jre"><isfalse value="${add-jre}"/></condition>
+                                <sequential xmlns:unless="ant:unless" unless:set="skip.add-jre">
+                                    <property name="add-jre.version" value="11"/><!-- default: Java 11 -->
+                                    <condition property="add-jre.type" value="jre" else="jdk"><!-- default: JRE, not JDK -->
+                                        <isfalse value="${add-jre.jdk}"/>
+                                    </condition>
+                                    <property name="adoptopenjdk.base" value="https://api.adoptopenjdk.net/v2"/>
+                                    <property name="adoptopenjdk.selector" value="releases/openjdk${add-jre.version}?release=latest&amp;openjdk_impl=openj9&amp;os=windows&amp;arch=x64&amp;type=${add-jre.type}"/>
+                                    <tstamp>
+                                        <format property="add-jre.tstamp" pattern="yyyyMMddHHmmssSSS" locale="en,US"/>
+                                    </tstamp>
+                                    <property name="add-jre.temp" location="${java.io.tmpdir}/get-jre_${add-jre.type}${add-jre.version}_${add-jre.tstamp}"/>
+                                    <property name="add-jre.dest" location="${settings.localRepository}/.cache/JREs/${add-jre.type}${add-jre.version}"/>
+                                    <delete dir="${add-jre.temp}"/>
+                                    <mkdir dir="${add-jre.temp}"/>
+
+                                    <!-- JRE cached? -->
+                                    <get src="${adoptopenjdk.base}/info/${adoptopenjdk.selector}"
+                                        dest="${add-jre.temp}/info.txt"/>
+                                    <replaceregexp file="${add-jre.temp}/info.txt"
+                                        match="&quot;download_count&quot;:\s*+\d++[,]?"
+                                        replace="" flags="g"/>
+                                    <condition property="add-jre.cached">
+                                        <and>
+                                            <available file="${add-jre.dest}/info.txt"/>
+                                            <filesmatch file1="${add-jre.temp}/info.txt"
+                                                        file2="${add-jre.dest}/info.txt"/>
+                                        </and>
+                                    </condition>
+
+                                    <!-- download JRE -->
+                                    <sequential unless:set="add-jre.cached">
+                                        <get src="${adoptopenjdk.base}/binary/${adoptopenjdk.selector}"
+                                            dest="${add-jre.temp}/jre.zip"/>
+                                        <delete dir="${add-jre.dest}"/>
+                                        <move todir="${add-jre.dest}"><fileset dir="${add-jre.temp}"/></move>
+                                    </sequential>
+
+                                    <!-- add JRE to folder and ZIP -->
+                                    <replaceregexp file="${project.build.directory}/products/idealized.product/win32/win32/x86_64/idealized.ini"
+                                        byline="no"
+                                        match="-vmargs([\r\n]++)"
+                                        replace="\0-Xshareclasses\1"/>
+                                    <unzip src="${add-jre.dest}/jre.zip"
+                                        dest="${project.build.directory}/products/idealized.product/win32/win32/x86_64">
+                                        <regexpmapper from="^[^/]++/(.++)$$" to="jre/\1" handledirsep="yes"/>
+                                    </unzip>
+                                    <zip destfile="${project.build.directory}/products/idealized_${build-date-yyyy-MM-dd}-win32.win32.x86_64.zip"
+                                         update="yes"
+                                         basedir="${project.build.directory}/products/idealized.product/win32/win32/x86_64"
+                                         includes="idealized.ini">
+                                        <mappedresources>
+                                            <zipfileset src="${add-jre.dest}/jre.zip"/>
+                                            <regexpmapper from="^[^/]++/(.++)$$" to="jre/\1" handledirsep="yes"/>
+                                        </mappedresources>
+                                    </zip>
+
+                                </sequential>
+
+                                <!-- NSIS cache: ${settings.localRepository}/.cache/NSIS_${nsis.version} -->
+                                <condition property="skip.nsis"><isfalse value="${nsis}"/></condition>
+                                <sequential xmlns:unless="ant:unless" unless:set="skip.nsis">
+
+                                    <!-- NSIS: cached or has to be downloaded -->
+                                    <property name="nsis.dest" location="${settings.localRepository}/.cache/nsis-${nsis.version}"/>
+                                    <condition property="nsis.cached">
+                                        <available file="${nsis.dest}"/>
+                                    </condition>
+                                    <sequential unless:set="nsis.cached">
+                                        <property name="nsis.temp" location="${java.io.tmpdir}/nsis_${nsis.version}"/>
+                                        <delete dir="${nsis.temp}"/>
+                                        <mkdir dir="${nsis.temp}"/>
+                                        <get src="https://downloads.sourceforge.net/project/nsis/NSIS%203/${nsis.version}/nsis-${nsis.version}.zip"
+                                            dest="${nsis.temp}/nsis.zip"/>
+                                        <unzip src="${nsis.temp}/nsis.zip" dest="${nsis.temp}"/>
+                                        <delete dir="${nsis.dest}"/>
+                                        <move todir="${nsis.dest}"><fileset dir="${nsis.temp}/nsis-${nsis.version}"/></move>
+                                    </sequential>
+
+                                    <!-- make Windows installer via NSIS -->
+                                    <length property="install.size.bytes">
+                                        <fileset dir="${project.build.directory}/products/idealized.product/win32/win32/x86_64"/>
+                                    </length>
+                                    <script language="javascript"><![CDATA[
+                                        var sizeInBytes = project.getProperty('install.size.bytes');
+                                        project.setNewProperty('install.size.kb',
+                                                               Math.round(sizeInBytes / 1024));
+                                    ]]></script>
+                                    <copy file="${project.basedir}/install.nsi"
+                                        todir="${project.build.directory}/products"/>
+                                    <exec executable="${nsis.dest}/makensis.exe"
+                                        dir="${project.build.directory}/products"
+                                        failonerror="yes" taskname="NSIS">
+                                        <arg value="/DAPPNAME=IDEalized"/>
+                                        <arg value="/DAPPEXE=idealized.exe"/>
+                                        <arg value="/DAPPINI=idealized.ini"/>
+                                        <arg value="/DFOLDER_NAME=IDEalized"/>
+                                        <arg value="/DPUBLISHER=Holger Voormann"/>
+                                        <arg value="/DCONTEXT_MENU=Open in IDEalized"/>
+                                        <arg value="/DINPUT_DIR=${project.build.directory}/products/idealized.product/win32/win32/x86_64"/>
+                                        <arg value="/DDATE=${build-date-yyyy-MM-dd}"/>
+                                        <arg value="/DINSTALLSIZE=${install.size.kb}"/>
+                                        <arg line="/X&quot;SetCompressor /SOLID lzma&quot;"/>
+                                        <arg line="install.nsi"/>
+                                    </exec>
+                                    <delete file="${project.build.directory}/products/install.nsi"/>
+
+                                </sequential>
+
+                            </target>
+
+                        </configuration>
+                    </execution>
+                </executions>
+
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
