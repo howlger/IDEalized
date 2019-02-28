@@ -17,7 +17,7 @@
    <splash location="org.idealized.branding" />
    <launcher name="idealized">
       <linux icon="icons/linux.xpm"/>
-      <macosx icon="icons/macosx.icns"/>
+      <macosx icon="icons/macos.icns"/>
       <win useIco="true">
          <ico path="icons/windows.ico"/>
          <bmp/>
