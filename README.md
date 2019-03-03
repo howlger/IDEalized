@@ -3,8 +3,9 @@
 ![IDEalized splash screen](org.idealized.branding/splash.bmp)
 
 Everything to build IDEalized, an IDE built on the customized
-[Eclipse IDE](https://www.eclipse.org/eclipseide/), containing additional plug-ins and
-- so far only for Windows - the [OpenJ9 OpenJDK 11](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=openj9).
+[Eclipse IDE](https://www.eclipse.org/eclipseide/), containing additional plug-ins
+and - so far only for Windows - the
+[OpenJ9 OpenJDK 11](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=openj9).
 
 IDEalized was choose as product name and the IDEalized branding was created
 in order not to violate any trademarks or licenses. Thanks to all authors and
