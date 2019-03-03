@@ -51,12 +51,10 @@
             <unit id="nu.psnet.quickimage.feature.group" version="0.0.0"/>
             <repository location="http://manu26.manufrog.com/~psnetnu/eclipse/updates"/>
         </location>
-        <!-- non-p2
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+        <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="AnyEditTools.feature.group" version="0.0.0"/>
             <repository location="http://andrei.gmxhome.de/eclipse/"/>
-        </location>
-        -->
+        </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>
             <repository location="https://dl.bintray.com/de-jcup/batcheditor"/>
@@ -69,12 +67,10 @@
             <unit id="net.sourceforge.javahexeditor.feature.group" version="0.0.0"/>
             <repository location="http://javahexeditor.sourceforge.net/update"/>
         </location>
-        <!--
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+        <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.dadacoalition.yedit.feature.feature.group" version="0.0.0"/>
             <repository location="http://dadacoalition.org/yedit"/>
-        </location>
-        -->
+        </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="net.resheim.eclipse.timekeeper.feature.group" version="0.0.0"/>
             <repository location="https://resheim.net/p2/eclipse-timekeeper"/>

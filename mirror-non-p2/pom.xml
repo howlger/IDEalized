@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>idealized</groupId>
+    <artifactId>non-p2_update_sites</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>idealized</groupId>
+        <artifactId>idealized</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <tycho-version>1.3.0</tycho-version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-p2-extras-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <executions>
+
+                    <!-- step 1: mirror old-style update site -->
+                    <execution>
+                        <id>mirror-update-sites</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>mirror</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                <repository>
+                                    <url>http://andrei.gmxhome.de/eclipse</url>
+                                </repository>
+                                <repository>
+                                    <url>http://dadacoalition.org/yedit</url>
+                                </repository>
+                            </source>
+                            <ius>
+                                <iu>
+                                    <id>AnyEditTools.feature.group</id>
+                                </iu>
+                                <iu>
+                                    <id>org.dadacoalition.yedit.feature.feature.group</id>
+                                </iu>
+                            </ius>
+                            <latestVersionOnly>true</latestVersionOnly>
+                        </configuration>
+                    </execution>
+
+                    <!-- step 3: generate the full p2 metadata for the mirrored
+                        artifacts -->
+                    <execution>
+                        <id>generate-full-metadata</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <!-- https://www.eclipse.org/tycho/sitedocs-extras/tycho-p2-extras-plugin/publish-features-and-bundles-mojo.html -->
+                            <goal>publish-features-and-bundles</goal>
+                        </goals>
+                        <configuration>
+                            <sourceLocation>${project.build.directory}/repository</sourceLocation>
+                            <metadataRepositoryLocation>${project.build.directory}/repository</metadataRepositoryLocation>
+                            <artifactRepositoryLocation>${project.build.directory}/repository</artifactRepositoryLocation>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+
+                    <!-- step 2: strip the p2 metadata that contains the "partial IUs"
+                         that which be used for dependency resolution in Tycho -->
+                    <execution>
+                        <id>remove-incomplete-metadata</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete file="${project.build.directory}/repository/content.jar"/>
+                                <delete file="${project.build.directory}/repository/artifacts.jar"/>
+                                <replaceregexp file="${project.basedir}/../product/idealized.p2.inf"
+                                    match="(?&lt;=[\r\n])#non-p2#\s*+" byline="no" flags="gi" replace=""/>
+                                <replaceregexp file="${project.basedir}/../product/idealized.product"
+                                    match="&lt;!-[-]\s*+non-p2:\s*+((?:(?!-[-])[\s\S])++)[-]->" byline="no" flags="gi" replace="\1"/>
+                                <makeurl property="non-p2.mirror.url" file="${project.build.directory}/repository"/>
+                                <replaceregexp file="${project.basedir}/../target-platform\idealized-target.target"
+                                    match="&lt;!-[-]\s*+non-p2:\s*+((?:(?!&lt;repository)[\s\S])++&lt;repository\s++location\s*+=\s*+&quot;)[^&quot;]++(&quot;(?:(?!-[-])[\s\S])++)[-]->"
+                                    byline="no" flags="gi"  replace="\1${non-p2.mirror.url}\2"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

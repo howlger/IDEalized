@@ -6,6 +6,28 @@ addRepository(type:0,location:http${#58}//download.eclipse.org/releases/latest,n
 addRepository(type:1,location:http${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
 addRepository(type:0,location:http${#58}//manu26.manufrog.com/~psnetnu/eclipse/updates,name:QuickImage,enabled:true);\
 addRepository(type:1,location:http${#58}//manu26.manufrog.com/~psnetnu/eclipse/updates,name:QuickImage,enabled:true);\
+#non-p2# addRepository(type:0,location:http${#58}//andrei.gmxhome.de/eclipse,name:AnyEdit Tools,enabled:true);\
+#non-p2# addRepository(type:1,location:http${#58}//andrei.gmxhome.de/eclipse,name:AnyEdit Tools,enabled:true);\
+addRepository(type:0,location:http${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
+addRepository(type:0,location:http${#58}//download.eclipse.org/technology/subversive/4.0/update-site,name:SVN - Eclipse Subversive,enabled:true);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/technology/subversive/4.0/update-site,name:SVN - Eclipse Subversive,enabled:true);\
+addRepository(type:0,location:http${#58}//community.polarion.com/projects/subversive/download/eclipse/6.0/update-site,name:SVN - Subversive Connectors (Polarion),enabled:true);\
+addRepository(type:1,location:http${#58}//community.polarion.com/projects/subversive/download/eclipse/6.0/update-site,name:SVN - Subversive Connectors (Polarion),enabled:true);\
+addRepository(type:0,location:http${#58}//download.eclipse.org/tm4e/snapshots,name:Eclipse TM4E (TextMate support for Eclipse),enabled:true);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/tm4e/snapshots,name:Eclipse TM4E (TextMate support for Eclipse),enabled:true);\
+addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/batcheditor,name:Batch Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/batcheditor,name:Batch Editor,enabled:true);\
+addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/basheditor,name:Bash Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/basheditor,name:Bash Editor,enabled:true);\
+addRepository(type:0,location:http${#58}//javahexeditor.sourceforge.net/update,name:Java Hex Editor,enabled:true);\
+addRepository(type:1,location:http${#58}//javahexeditor.sourceforge.net/update,name:Java Hex Editor,enabled:true);\
+#non-p2# addRepository(type:0,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
+#non-p2# addRepository(type:1,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
+addRepository(type:0,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
+addRepository(type:1,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
+addRepository(type:0,location:https${#58}//spotbugs.github.io/eclipse,name:SpotBugs,enabled:true);\
+addRepository(type:1,location:https${#58}//spotbugs.github.io/eclipse,name:SpotBugs,enabled:true);\
   mkdir(path:${installFolder}/dropins);
 requires.1.namespace=org.eclipse.equinox.p2.iu
 requires.1.name=toolingorg.eclipse.platform.configuration.macosx

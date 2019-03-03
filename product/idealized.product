@@ -41,18 +41,14 @@
       <!-- general IDE -->
       <feature id="org.eclipse.epp.logging.aeri.feature" installMode="root"/>
       <feature id="org.eclipse.tips.feature" installMode="root"/>
-      <!--
-      <feature id="AnyEditTools" installMode="root"/>
-      <feature id="dakara.eclipse.commander.feature" installMode="root"/>
-      -->
+      <!-- non-p2: <feature id="AnyEditTools" installMode="root"/> -->
+      <!-- <feature id="dakara.eclipse.commander.feature" installMode="root"/> -->
       <feature id="de.jcup.batcheditor" installMode="root"/>
       <feature id="de.jcup.basheditor" installMode="root"/>
       <feature id="net.sourceforge.javahexeditor" installMode="root"/>
       <feature id="org.eclipse.mylyn.wikitext_feature" installMode="root"/>
       <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
-      <!--
-      <feature id="org.dadacoalition.yedit.feature" installMode="root"/>
-      -->
+      <!-- non-p2: <feature id="org.dadacoalition.yedit.feature" installMode="root"/> -->
       <feature id="tm-feature" installMode="root"/>
 
       <!-- Git + SVN -->
