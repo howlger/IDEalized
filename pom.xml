@@ -24,7 +24,7 @@
             </activation>
             <modules>
                 <module>target-platform</module>
-                <module>org.idealized.branding</module>
+                <module>org.idealized.customization</module>
                 <module>org.idealized.feature</module>
                 <module>product</module>
             </modules>

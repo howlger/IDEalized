@@ -1,6 +1,6 @@
 # IDEalized
 
-![IDEalized splash screen](org.idealized.branding/splash.bmp)
+![IDEalized splash screen](org.idealized.customization/splash.bmp)
 
 Everything to build IDEalized, an IDE built on a customized
 [Eclipse IDE](https://www.eclipse.org/eclipseide/), containing additional plug-ins

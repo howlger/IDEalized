@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: IDEalized product branding and customization
-Bundle-SymbolicName: org.idealized.branding;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: Holger Voormann
-Automatic-Module-Name: org.idealized.branding
-Eclipse-BundleShape: dir
