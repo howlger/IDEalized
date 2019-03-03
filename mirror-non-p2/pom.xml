@@ -86,8 +86,6 @@
                             <target>
                                 <delete file="${project.build.directory}/repository/content.jar"/>
                                 <delete file="${project.build.directory}/repository/artifacts.jar"/>
-                                <replaceregexp file="${project.basedir}/../product/idealized.p2.inf"
-                                    match="(?&lt;=[\r\n])#non-p2#\s*+" byline="no" flags="gi" replace=""/>
                                 <replaceregexp file="${project.basedir}/../product/idealized.product"
                                     match="&lt;!-[-]\s*+non-p2:\s*+((?:(?!-[-])[\s\S])++)[-]->" byline="no" flags="gi" replace="\1"/>
                                 <makeurl property="non-p2.mirror.url" file="${project.build.directory}/repository"/>
