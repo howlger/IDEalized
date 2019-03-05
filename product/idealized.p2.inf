@@ -24,6 +24,8 @@ addRepository(type:0,location:http${#58}//javahexeditor.sourceforge.net/update,n
 addRepository(type:1,location:http${#58}//javahexeditor.sourceforge.net/update,name:Java Hex Editor,enabled:true);\
 addRepository(type:0,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
 addRepository(type:1,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
+addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/jenkinseditor,name:Jenkins Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/jenkinseditor,name:Jenkins Editor,enabled:true);\
 addRepository(type:0,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
 addRepository(type:1,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
 addRepository(type:0,location:https${#58}//spotbugs.github.io/eclipse,name:SpotBugs,enabled:true);\

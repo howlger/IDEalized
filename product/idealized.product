@@ -49,6 +49,7 @@
       <feature id="org.eclipse.mylyn.wikitext_feature" installMode="root"/>
       <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
       <!-- non-p2: <feature id="org.dadacoalition.yedit.feature" installMode="root"/> -->
+      <feature id="de.jcup.jenkinseditor.feature" installMode="root"/>
       <feature id="tm-feature" installMode="root"/>
 
       <!-- Git + SVN -->

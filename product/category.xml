@@ -8,5 +8,8 @@
     <feature id="nu.psnet.quickimage" version="0.0.0">
         <category name="idealized_ide_recommended" />
     </feature>
+    <feature id="de.jcup.jenkinseditor.feature" version="0.0.0">
+        <category name="idealized_ide_recommended" />
+    </feature>
 
 </site>

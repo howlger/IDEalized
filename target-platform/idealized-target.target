@@ -72,6 +72,10 @@
             <repository location="http://dadacoalition.org/yedit"/>
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="de.jcup.jenkinseditor.feature.feature.group" version="0.0.0"/>
+            <repository location="https://dl.bintray.com/de-jcup/jenkinseditor"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="net.resheim.eclipse.timekeeper.feature.group" version="0.0.0"/>
             <repository location="https://resheim.net/p2/eclipse-timekeeper"/>
         </location>
