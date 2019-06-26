@@ -89,11 +89,12 @@
       <feature id="org.eclipse.recommenders.snipmatch.rcp.feature" installMode="root"/>
       -->
 
-      <!-- web: HTML, JavaScript, XML, XSL -->
+      <!-- web: HTML, JavaScript, XML, XSL (via both, WTP and Wild Web Developer) -->
       <feature id="org.eclipse.wst.web_ui.feature" installMode="root"/>
       <feature id="org.eclipse.wst.xml_ui.feature" installMode="root"/>
       <feature id="org.eclipse.wst.xsl.feature" installMode="root"/>
       <feature id="org.eclipse.wst.jsdt.feature" installMode="root"/>
+      <feature id="org.eclipse.wildwebdeveloper.feature" installMode="root"/>
 
    </features>
 
