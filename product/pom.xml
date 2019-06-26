@@ -14,7 +14,7 @@
     <properties>
         <add-jre>yes</add-jre>
         <add-jre.jdk>yes</add-jre.jdk>
-        <add-jre.version>11</add-jre.version>
+        <add-jre.version>12</add-jre.version>
         <nsis>yes</nsis>
         <nsis.version>3.03</nsis.version>
     </properties>
