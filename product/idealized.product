@@ -75,6 +75,12 @@
       <feature id="org.eclipse.buildship" installMode="root"/>
       <feature id="com.github.spotbugs.plugin.eclipse" installMode="root"/>
 
+      <!-- sources for Plug-in Development Environment (PDE) -->
+      <feature id="org.eclipse.platform.source" installMode="root"/>
+      <feature id="org.eclipse.rcp.source" installMode="root"/>
+      <feature id="org.eclipse.jdt.source" installMode="root"/>
+      <feature id="org.eclipse.pde.source" installMode="root"/>
+
       <!-- Eclipse Code Recommenders for Java -->
       <!--
       <feature id="org.eclipse.recommenders.rcp.feature" installMode="root"/>
