@@ -209,7 +209,7 @@
                                              /DFOLDER_NAME=IDEalized
                                              /DPUBLISHER=&quot;Holger Voormann&quot;
                                              /DCONTEXT_MENU=&quot;Open in IDEalized&quot;
-                                             /DINPUT_DIR=&quot;${project.build.directory}/_&quot;
+                                             /DINPUT_DIR=&quot;../_&quot;
                                              /DDATE=${build-date-yyyy-MM-dd}
                                              /DINSTALLSIZE=${install.size.kb}
                                              /X&quot;SetCompressor /SOLID lzma&quot;
