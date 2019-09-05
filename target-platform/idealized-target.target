@@ -49,7 +49,7 @@
             <repository location="http://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="tm-feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
             <repository location="http://download.eclipse.org/tm4e/snapshots"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">

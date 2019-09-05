@@ -50,7 +50,7 @@
       <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
       <!-- non-p2: <feature id="org.dadacoalition.yedit.feature" installMode="root"/> -->
       <feature id="de.jcup.jenkinseditor.feature" installMode="root"/>
-      <feature id="tm-feature" installMode="root"/>
+      <feature id="org.eclipse.tm4e.feature" installMode="root"/>
 
       <!-- Git + SVN -->
       <feature id="org.eclipse.egit" installMode="root"/>
