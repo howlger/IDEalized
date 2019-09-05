@@ -95,7 +95,7 @@
                                         <isfalse value="${add-jre.jdk}"/>
                                     </condition>
                                     <property name="adoptopenjdk.base" value="https://api.adoptopenjdk.net/v2"/>
-                                    <property name="adoptopenjdk.selector" value="releases/openjdk${add-jre.version}?release=latest&amp;openjdk_impl=openj9&amp;os=windows&amp;arch=x64&amp;type=${add-jre.type}"/>
+                                    <property name="adoptopenjdk.selector" value="releases/openjdk${add-jre.version}?release=latest&amp;openjdk_impl=openj9&amp;os=windows&amp;arch=x64&amp;type=${add-jre.type}&heap_size=normal"/>
                                     <tstamp>
                                         <format property="add-jre.tstamp" pattern="yyyyMMddHHmmssSSS" locale="en,US"/>
                                     </tstamp>
