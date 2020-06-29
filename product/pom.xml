@@ -14,7 +14,7 @@
     <properties>
         <add-jre>yes</add-jre>
         <add-jre.jdk>yes</add-jre.jdk>
-        <add-jre.version>12</add-jre.version>
+        <add-jre.version>14</add-jre.version>
         <nsis>yes</nsis>
         <nsis.version>3.03</nsis.version>
     </properties>
@@ -90,7 +90,7 @@
                                 <!-- JREs cache: ${settings.localRepository}/.cache/JREs -->
                                 <condition property="skip.add-jre"><isfalse value="${add-jre}"/></condition>
                                 <sequential xmlns:unless="ant:unless" unless:set="skip.add-jre">
-                                    <property name="add-jre.version" value="11"/><!-- default: Java 11 -->
+                                    <property name="add-jre.version" value="14"/><!-- default: Java 14 -->
                                     <condition property="add-jre.type" value="jre" else="jdk"><!-- default: JRE, not JDK -->
                                         <isfalse value="${add-jre.jdk}"/>
                                     </condition>

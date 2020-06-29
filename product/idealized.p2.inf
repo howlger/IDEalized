@@ -1,7 +1,7 @@
 # Based on https://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/eclipse.platform.releng.tychoeclipsebuilder/platform/platform.p2.inf
 instructions.configure=\
-addRepository(type:0,location:http${#58}//download.eclipse.org/eclipse/updates/4.12,name:Eclipse Project 4.12,enabled:true);\
-addRepository(type:1,location:http${#58}//download.eclipse.org/eclipse/updates/4.12,name:Eclipse Project 4.12,enabled:true);\
+addRepository(type:0,location:http${#58}//download.eclipse.org/eclipse/updates/4.16,name:Eclipse Project 4.16,enabled:true);\
+addRepository(type:1,location:http${#58}//download.eclipse.org/eclipse/updates/4.16,name:Eclipse Project 4.16,enabled:true);\
 addRepository(type:0,location:http${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
 addRepository(type:1,location:http${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
 addRepository(type:0,location:http${#58}//manu26.manufrog.com/~psnetnu/eclipse/updates,name:QuickImage,enabled:true);\
