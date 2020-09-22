@@ -5,7 +5,7 @@
 Everything to build IDEalized, an IDE built on a customized
 [Eclipse IDE](https://www.eclipse.org/eclipseide/), containing additional plug-ins
 and - so far only for Windows - the
-[OpenJ9 OpenJDK 11](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=openj9).
+[OpenJ9 OpenJDK 14](https://adoptopenjdk.net/?variant=openjdk14&jvmVariant=openj9).
 
 IDEalized was choose as product name and the IDEalized branding was created
 in order not to violate any trademarks or licenses. Thanks to all authors and
