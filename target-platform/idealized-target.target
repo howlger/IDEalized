@@ -65,7 +65,7 @@
         </location>
         <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="AnyEditTools.feature.group" version="0.0.0"/>
-            <repository location="http://andrei.gmxhome.de/eclipse/"/>
+            <repository location="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/"/>
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>
