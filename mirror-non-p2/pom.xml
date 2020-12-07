@@ -32,7 +32,7 @@
                         <configuration>
                             <source>
                                 <repository>
-                                    <url>http://andrei.gmxhome.de/eclipse</url>
+                                    <url>https://raw.githubusercontent.com/iloveeclipse/plugins/latest</url>
                                 </repository>
                                 <repository>
                                     <url>http://dadacoalition.org/yedit</url>
