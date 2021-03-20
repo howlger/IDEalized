@@ -39,7 +39,6 @@
       <feature id="org.eclipse.epp.mpc" installMode="root"/>
 
       <!-- general IDE -->
-      <feature id="org.eclipse.epp.logging.aeri.feature" installMode="root"/>
       <feature id="org.eclipse.tips.feature" installMode="root"/>
       <!-- non-p2: <feature id="AnyEditTools" installMode="root"/> -->
       <!-- <feature id="dakara.eclipse.commander.feature" installMode="root"/> -->
@@ -75,11 +74,11 @@
       <feature id="org.eclipse.buildship" installMode="root"/>
       <feature id="com.github.spotbugs.plugin.eclipse" installMode="root"/>
 
-      <!-- Java 15 -->
-      <feature id="org.eclipse.jdt.java15patch" installMode="root"/>
-      <feature id="org.eclipse.jdt.java15patch.source" installMode="root"/>
-      <feature id="org.eclipse.pde.java15patch" installMode="root"/>
-      <feature id="org.eclipse.pde.java15patch.source" installMode="root"/>
+      <!-- Java 16 -->
+      <feature id="org.eclipse.jdt.java16patch" installMode="root"/>
+      <feature id="org.eclipse.jdt.java16patch.source" installMode="root"/>
+      <feature id="org.eclipse.pde.java16patch" installMode="root"/>
+      <feature id="org.eclipse.pde.java16patch.source" installMode="root"/>
 
       <!-- sources for Plug-in Development Environment (PDE) -->
       <feature id="org.eclipse.platform.source" installMode="root"/>

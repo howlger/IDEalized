@@ -9,18 +9,17 @@
             <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
-            <repository location="http://download.eclipse.org/eclipse/updates/4.17"/>
+            <repository location="https://download.eclipse.org/eclipse/updates/4.19"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.jdt.java15patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.jdt.java15patch.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java15patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java15patch.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.17-P-builds"/>
+            <unit id="org.eclipse.jdt.java16patch.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.jdt.java16patch.source.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.java16patch.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.java16patch.source.feature.group" version="0.0.0"/>
+            <repository location="https://download.eclipse.org/eclipse/updates/4.19-P-builds"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.epp.logging.aeri.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.mylyn.wikitext_feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
@@ -40,24 +39,24 @@
             <unit id="org.eclipse.wst.jsdt.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wildwebdeveloper.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wildwebdeveloper.embedder.node.feature.feature.group" version="0.0.0"/>
-            <repository location="http://download.eclipse.org/releases/latest"/>
+            <repository location="https://download.eclipse.org/releases/latest"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.egit.mylyn.feature.group" version="0.0.0"/>
-            <repository location="http://download.eclipse.org/egit/updates"/>
+            <repository location="https://download.eclipse.org/egit/updates"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.team.svn.feature.group" version="0.0.0"/>
-            <repository location="http://download.eclipse.org/technology/subversive/4.0/update-site"/>
+            <repository location="https://download.eclipse.org/technology/subversive/4.0/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.polarion.eclipse.team.svn.connector.svnkit18.feature.group" version="0.0.0"/>
-            <repository location="http://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
+            <repository location="https://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
-            <repository location="http://download.eclipse.org/tm4e/snapshots"/>
+            <repository location="https://download.eclipse.org/tm4e/snapshots"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="nu.psnet.quickimage.feature.group" version="0.0.0"/>
@@ -65,7 +64,7 @@
         </location>
         <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="AnyEditTools.feature.group" version="0.0.0"/>
-            <repository location="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/"/>
+            <repository location="https://raw.githubusercontent.com/iloveeclipse/plugins/latest"/>
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>

@@ -14,7 +14,7 @@
     <properties>
         <add-jre>yes</add-jre>
         <add-jre.jdk>yes</add-jre.jdk>
-        <add-jre.version>15</add-jre.version>
+        <add-jre.version>16</add-jre.version>
         <nsis>yes</nsis>
         <nsis.version>3.03</nsis.version>
     </properties>
@@ -171,11 +171,21 @@
                                     <length property="install.size.bytes">
                                         <fileset dir="${project.build.directory}/products/idealized.product/win32/win32/x86_64"/>
                                     </length>
-                                    <script language="javascript" classpathref="maven.plugin.classpath"><![CDATA[
-                                        var sizeInBytes = project.getProperty('install.size.bytes');
-                                        project.setNewProperty('install.size.kb',
-                                                               Math.round(sizeInBytes / 1024));
-                                    ]]></script>
+                                    <echo file="${project.build.directory}/install_size.xml"
+                                        message="&lt;bytes>${install.size.bytes}&lt;/bytes>"/>
+                                    <echo file="${project.build.directory}/install_size.xsl"
+                                        >&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;>
+                                         &lt;xsl:output method=&quot;text&quot;/>
+                                             &lt;xsl:template match=&quot;/&quot;>
+                                                 &lt;xsl:value-of select=&quot;ceiling(bytes div 1024)&quot;/>
+                                             &lt;/xsl:template>
+                                         &lt;/xsl:stylesheet>
+                                    </echo>
+                                    <xslt in="${project.build.directory}/install_size.xml"
+                                        style="${project.build.directory}/install_size.xsl"
+                                        out="${project.build.directory}/install_size.txt"/>
+                                    <loadfile property="install.size.kb"
+                                        srcfile="${project.build.directory}/install_size.txt"/>
                                     <copy file="${project.basedir}/install.nsi"
                                         todir="${project.build.directory}/products"/>
                                     <condition property="is.windows">
