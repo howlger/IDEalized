@@ -8,11 +8,11 @@
     <packaging>pom</packaging>
     <properties>
 
-        <!-- Tycho version (<https://wiki.eclipse.org/Tycho/Release_Notes>)
-             - .mvn\extensions.xml
+        <!-- Tycho version (<https://github.com/eclipse/tycho/blob/master/RELEASE_NOTES.md>) specified in:
+             - .mvn/extensions.xml
              - mirror-non-p2/pom.xml
              - and here: -->
-        <tycho-version>2.1.0</tycho-version>
+        <tycho-version>2.3.0</tycho-version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
