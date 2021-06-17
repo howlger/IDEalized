@@ -9,15 +9,16 @@
             <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.19"/>
+            <repository location="https://download.eclipse.org/eclipse/updates/4.20"/>
         </location>
+        <!-- Java 17 support (BETA)
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.jdt.java16patch.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.jdt.java16patch.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.java16patch.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.java16patch.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.19-P-builds"/>
-        </location>
+            <repository location="https://download.eclipse.org/eclipse/updates/4.21-P-builds"/>
+        </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>

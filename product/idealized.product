@@ -8,7 +8,7 @@
    <launcherArgs>
       <programArgs>--launcher.defaultAction openFile --launcher.appendVmargs
       </programArgs>
-      <vmArgs>-Xms256m -Xmx1024m -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Declipse.p2.unsignedPolicy=allow -Dorg.eclipse.ecf.provider.filetransfer.retrieve.closeTimeout=4200 -Dorg.eclipse.ecf.provider.filetransfer.retrieve.readTimeout=4200
+      <vmArgs>-Xms256m -Xmx1024m -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM -Dosgi.requiredJavaVersion=11 -Dosgi.dataAreaRequiresExplicitInit=true -Declipse.p2.unsignedPolicy=allow -Dorg.eclipse.ecf.provider.filetransfer.retrieve.closeTimeout=4200 -Dorg.eclipse.ecf.provider.filetransfer.retrieve.readTimeout=4200
       </vmArgs>
       <vmArgsMac>-Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -74,25 +74,18 @@
       <feature id="org.eclipse.buildship" installMode="root"/>
       <feature id="com.github.spotbugs.plugin.eclipse" installMode="root"/>
 
-      <!-- Java 16 -->
-      <feature id="org.eclipse.jdt.java16patch" installMode="root"/>
-      <feature id="org.eclipse.jdt.java16patch.source" installMode="root"/>
-      <feature id="org.eclipse.pde.java16patch" installMode="root"/>
-      <feature id="org.eclipse.pde.java16patch.source" installMode="root"/>
+      <!-- Java 17 (BETA)
+      <feature id="org.eclipse.jdt.java17patch" installMode="root"/>
+      <feature id="org.eclipse.jdt.java17patch.source" installMode="root"/>
+      <feature id="org.eclipse.pde.java17patch" installMode="root"/>
+      <feature id="org.eclipse.pde.java17patch.source" installMode="root"/>
+      -->
 
       <!-- sources for Plug-in Development Environment (PDE) -->
       <feature id="org.eclipse.platform.source" installMode="root"/>
       <feature id="org.eclipse.rcp.source" installMode="root"/>
       <feature id="org.eclipse.jdt.source" installMode="root"/>
       <feature id="org.eclipse.pde.source" installMode="root"/>
-
-      <!-- Eclipse Code Recommenders for Java -->
-      <!--
-      <feature id="org.eclipse.recommenders.rcp.feature" installMode="root"/>
-      <feature id="org.eclipse.recommenders.mylyn.rcp.feature" installMode="root"/>
-      <feature id="org.eclipse.recommenders.news.rcp.feature" installMode="root"/>
-      <feature id="org.eclipse.recommenders.snipmatch.rcp.feature" installMode="root"/>
-      -->
 
       <!-- web: HTML, JavaScript, XML, XSL (via both, WTP and Wild Web Developer) -->
       <feature id="org.eclipse.wst.web_ui.feature" installMode="root"/>
