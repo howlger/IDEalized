@@ -9,7 +9,7 @@
             <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.20"/>
+            <repository location="https://download.eclipse.org/eclipse/updates/latest"/>
         </location>
         <!-- Java 17 support (BETA)
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
