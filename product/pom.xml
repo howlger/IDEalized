@@ -90,11 +90,16 @@
                                 <!-- JREs cache: ${settings.localRepository}/.cache/JREs -->
                                 <condition property="skip.add-jre"><isfalse value="${add-jre}"/></condition>
                                 <sequential xmlns:unless="ant:unless" unless:set="skip.add-jre">
-                                    <property name="add-jre.version" value="14"/><!-- default: Java 14 -->
+                                    <property name="add-jre.version" value="17"/><!-- default: Java 17 -->
                                     <condition property="add-jre.type" value="jre" else="jdk"><!-- default: JRE, not JDK -->
                                         <isfalse value="${add-jre.jdk}"/>
                                     </condition>
+
+                                    <!-- download from https://adoptopenjdk.net
+                                         since https://adoptium.net/ does not provide OpenJ9
+                                         (IBM OpenJ9: https://developer.ibm.com/semeru-runtime-downloads/) -->
                                     <property name="adoptopenjdk.base" value="https://api.adoptopenjdk.net/v3"/>
+
                                     <tstamp>
                                         <format property="add-jre.tstamp" pattern="yyyyMMddHHmmssSSS" locale="en,US"/>
                                     </tstamp>
@@ -104,7 +109,7 @@
                                     <mkdir dir="${add-jre.temp}"/>
 
                                     <!-- JRE cached? -->
-                                    <get src="${adoptopenjdk.base}/assets/feature_releases/${add-jre.version}/ea?sort_method=DATE&amp;page_size=1&amp;release_type=ga&amp;os=windows&amp;architecture=x64&amp;heap_size=normal&amp;image_type=jdk&amp;jvm_impl=openj9"
+                                    <get src="${adoptopenjdk.base}/assets/feature_releases/${add-jre.version}/ga?sort_method=DATE&amp;page_size=1&amp;os=windows&amp;architecture=x64&amp;heap_size=normal&amp;image_type=jdk&amp;jvm_impl=openj9"
                                         dest="${add-jre.temp}/info.txt"/>
                                     <replaceregexp file="${add-jre.temp}/info.txt"
                                         match="&quot;download_count&quot;:\s*+\d++[,]?"
