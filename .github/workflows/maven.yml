@@ -24,3 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean verify -P mirror-non-p2
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: idealized
+        path: /home/runner/work/IDEalized/IDEalized/mirror-non-p2/target/repository
