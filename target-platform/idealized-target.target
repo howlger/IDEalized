@@ -53,7 +53,7 @@
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.polarion.eclipse.team.svn.connector.svnkit18.feature.group" version="0.0.0"/>
-            <repository location="https://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
+            <repository location="http://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
@@ -69,11 +69,11 @@
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>
-            <repository location="https://dl.bintray.com/de-jcup/batcheditor"/>
+            <repository location="https://de-jcup.github.io/update-site-eclipse-batch-editor/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.basheditor.feature.group" version="0.0.0"/>
-            <repository location="https://dl.bintray.com/de-jcup/basheditor"/>
+            <repository location="https://de-jcup.github.io/update-site-eclipse-bash-editor/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="net.sourceforge.javahexeditor.feature.group" version="0.0.0"/>
@@ -85,7 +85,7 @@
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.jenkinseditor.feature.feature.group" version="0.0.0"/>
-            <repository location="https://dl.bintray.com/de-jcup/jenkinseditor"/>
+            <repository location="https://de-jcup.github.io/update-site-eclipse-jenkins-editor/update-site/"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="net.resheim.eclipse.timekeeper.feature.group" version="0.0.0"/>
