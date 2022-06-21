@@ -72,7 +72,7 @@ Section
   #CreateShortcut "$DESKTOP\$APPNAMEFULL.lnk" "$INSTDIR\${APPEXE}"
 
   # register uninstaller
-  # see http://nsis.sourceforge.net/A_simple_installer_with_start_menu_shortcut_and_uninstaller
+  # see https://nsis.sourceforge.io/A_simple_installer_with_start_menu_shortcut_and_uninstaller
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\$APPNAMEFULL" "DisplayName" "$APPNAMEFULL"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\$APPNAMEFULL" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\$APPNAMEFULL" "QuietUninstallString" "$\"$INSTDIR\uninstall.exe$\" /S"
@@ -151,7 +151,7 @@ Section "Uninstall"
   Delete $INSTDIR\uninstall.exe
 
   # remove install directory if empty
-  # see http://nsis.sourceforge.net/Delete_dir_only_if_empty
+  # see https://nsis.sourceforge.io/Delete_dir_only_if_empty
   StrCpy $0 "$INSTDIR"
   Call un.DeleteDirIfEmpty
 
@@ -172,7 +172,7 @@ Function un.DeleteDirIfEmpty
    FindClose $R0
 FunctionEnd
 
-# http://nsis.sourceforge.net/More_advanced_replace_text_in_file
+# https://nsis.sourceforge.io/More_advanced_replace_text_in_file
 Function AdvReplaceInFile
     Exch $0 ;file to replace in
     Exch
