@@ -24,16 +24,10 @@
             <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.mylyn.wikitext_feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.hudson.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.bugzilla_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.java_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.pde_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.git.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.buildship.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.xml_ui.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.xsl.feature.feature.group" version="0.0.0"/>
@@ -48,6 +42,16 @@
             <repository location="https://download.eclipse.org/egit/updates"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.mylyn_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.hudson.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.bugzilla_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.java_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.pde_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.git.feature.group" version="0.0.0"/>
+            <repository location="https://download.eclipse.org/mylyn/releases/latest"/>
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.team.svn.feature.group" version="0.0.0"/>
             <repository location="https://download.eclipse.org/technology/subversive/4.0/update-site"/>
         </location>
@@ -56,12 +60,8 @@
             <repository location="http://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/tm4e/snapshots"/>
-        </location>
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="nu.psnet.quickimage.feature.group" version="0.0.0"/>
-            <repository location="http://manu26.manufrog.com/~psnetnu/eclipse/updates"/>
+            <repository location="https://raw.githubusercontent.com/Nodeclipse/quickimage/master/quickimage-updatesite"/>
         </location>
         <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="AnyEditTools.feature.group" version="0.0.0"/>
