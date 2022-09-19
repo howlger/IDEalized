@@ -1,11 +1,11 @@
-# Based on https://git.eclipse.org/c/platform/eclipse.platform.releng.aggregator.git/tree/eclipse.platform.releng.tychoeclipsebuilder/platform/platform.p2.inf
+# Based on https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/blob/master/eclipse.platform.releng.tychoeclipsebuilder/eclipse.platform.repository/platform.p2.inf
 instructions.configure=\
-addRepository(type:0,location:https${#58}//download.eclipse.org/eclipse/updates/4.19,name:Eclipse Project 4.19,enabled:true);\
-addRepository(type:1,location:https${#58}//download.eclipse.org/eclipse/updates/4.19,name:Eclipse Project 4.19,enabled:true);\
+addRepository(type:0,location:https${#58}//download.eclipse.org/eclipse/updates/latest,name:Eclipse Project Latest,enabled:true);\
+addRepository(type:1,location:https${#58}//download.eclipse.org/eclipse/updates/latest,name:Eclipse Project Latest,enabled:true);\
 addRepository(type:0,location:https${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
 addRepository(type:1,location:https${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
-addRepository(type:0,location:http${#58}//manu26.manufrog.com/~psnetnu/eclipse/updates,name:QuickImage,enabled:true);\
-addRepository(type:1,location:http${#58}//manu26.manufrog.com/~psnetnu/eclipse/updates,name:QuickImage,enabled:true);\
+addRepository(type:0,location:https${#58}//raw.githubusercontent.com/Nodeclipse/quickimage/master/quickimage-updatesite,name:QuickImage,enabled:true);\
+addRepository(type:1,location:https${#58}//raw.githubusercontent.com/Nodeclipse/quickimage/master/quickimage-updatesite,name:QuickImage,enabled:true);\
 addRepository(type:0,location:https${#58}//raw.githubusercontent.com/iloveeclipse/plugins/latest,name:AnyEdit Tools,enabled:true);\
 addRepository(type:1,location:https${#58}//raw.githubusercontent.com/iloveeclipse/plugins/latest,name:AnyEdit Tools,enabled:true);\
 addRepository(type:0,location:https${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
@@ -14,18 +14,18 @@ addRepository(type:0,location:https${#58}//download.eclipse.org/technology/subve
 addRepository(type:1,location:https${#58}//download.eclipse.org/technology/subversive/4.0/update-site,name:SVN - Eclipse Subversive,enabled:true);\
 addRepository(type:0,location:https${#58}//community.polarion.com/projects/subversive/download/eclipse/6.0/update-site,name:SVN - Subversive Connectors (Polarion),enabled:true);\
 addRepository(type:1,location:https${#58}//community.polarion.com/projects/subversive/download/eclipse/6.0/update-site,name:SVN - Subversive Connectors (Polarion),enabled:true);\
-addRepository(type:0,location:https${#58}//download.eclipse.org/tm4e/snapshots,name:Eclipse TM4E (TextMate support for Eclipse),enabled:true);\
-addRepository(type:1,location:https${#58}//download.eclipse.org/tm4e/snapshots,name:Eclipse TM4E (TextMate support for Eclipse),enabled:true);\
-addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/batcheditor,name:Batch Editor,enabled:true);\
-addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/batcheditor,name:Batch Editor,enabled:true);\
-addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/basheditor,name:Bash Editor,enabled:true);\
-addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/basheditor,name:Bash Editor,enabled:true);\
+addRepository(type:0,location:https${#58}//de-jcup.github.io/update-site-eclipse-batch-editor/update-site,name:Batch Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//de-jcup.github.io/update-site-eclipse-batch-editor/update-site,name:Batch Editor,enabled:true);\
+addRepository(type:0,location:https${#58}//de-jcup.github.io/update-site-eclipse-bash-editor/update-site,name:Bash Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//de-jcup.github.io/update-site-eclipse-bash-editor/update-site,name:Bash Editor,enabled:true);\
+addRepository(type:0,location:https${#58}//download.eclipse.org/mylyn/releases/latest,name:Eclipse Mylyn,enabled:true);\
+addRepository(type:1,location:https${#58}//download.eclipse.org/mylyn/releases/latest,name:Eclipse Mylyn,enabled:true);\
 addRepository(type:0,location:http${#58}//javahexeditor.sourceforge.net/update,name:Java Hex Editor,enabled:true);\
 addRepository(type:1,location:http${#58}//javahexeditor.sourceforge.net/update,name:Java Hex Editor,enabled:true);\
 addRepository(type:0,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
 addRepository(type:1,location:http${#58}//dadacoalition.org/yedit,name:YEdit,enabled:true);\
-addRepository(type:0,location:https${#58}//dl.bintray.com/de-jcup/jenkinseditor,name:Jenkins Editor,enabled:true);\
-addRepository(type:1,location:https${#58}//dl.bintray.com/de-jcup/jenkinseditor,name:Jenkins Editor,enabled:true);\
+addRepository(type:0,location:https${#58}//de-jcup.github.io/update-site-eclipse-jenkins-editor/update-site/,name:Jenkins Editor,enabled:true);\
+addRepository(type:1,location:https${#58}//de-jcup.github.io/update-site-eclipse-jenkins-editor/update-site/,name:Jenkins Editor,enabled:true);\
 addRepository(type:0,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
 addRepository(type:1,location:https${#58}//resheim.net/p2/eclipse-timekeeper,name:Timekeeper,enabled:true);\
 addRepository(type:0,location:https${#58}//spotbugs.github.io/eclipse,name:SpotBugs,enabled:true);\
