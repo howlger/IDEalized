@@ -86,6 +86,9 @@
       <feature id="org.eclipse.jdt.source" installMode="root"/>
       <feature id="org.eclipse.pde.source" installMode="root"/>
 
+      <!-- misc: "Repository Explorer" view -->
+      <feature id="org.eclipse.oomph.targlets" installMode="root"/>
+
       <!-- web: HTML, JavaScript, XML, XSL (via both, WTP and Wild Web Developer) -->
       <feature id="org.eclipse.wst.web_ui.feature" installMode="root"/>
       <feature id="org.eclipse.wst.xml_ui.feature" installMode="root"/>
