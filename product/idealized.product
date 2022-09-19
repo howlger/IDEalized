@@ -65,7 +65,6 @@
       <feature id="org.eclipse.mylyn.java_feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.pde_feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.git" installMode="root"/>
-      <feature id="org.eclipse.egit.mylyn" installMode="root"/>
 
       <!-- Java -->
       <feature id="org.eclipse.jdt" installMode="root"/>

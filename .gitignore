@@ -3,3 +3,4 @@
 .polyglot.META-INF
 .polyglot.feature.xml
 .polyglot.*.target
+.tycho-*.xml
