@@ -9,15 +9,16 @@
             <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.e4.core.tools.feature.feature.group" version="0.0.0"/>
             <repository location="https://download.eclipse.org/eclipse/updates/latest"/>
         </location>
-        <!-- Java 18 support (BETA)
+        <!-- Java 19 support (BETA)
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.jdt.java18patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.jdt.java18patch.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java18patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java18patch.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.23-P-builds"/>
+            <unit id="org.eclipse.jdt.java19patch.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.jdt.java19patch.source.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.java19patch.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.java19patch.source.feature.group" version="0.0.0"/>
+            <repository location="https://download.eclipse.org/eclipse/updates/4.25-P-builds"/>
         </location> -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
@@ -26,6 +27,7 @@
             <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.m2e.pde.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.buildship.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>

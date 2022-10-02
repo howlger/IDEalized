@@ -40,6 +40,7 @@
 
       <!-- general IDE -->
       <feature id="org.eclipse.tips.feature" installMode="root"/>
+      <feature id="nu.psnet.quickimage" installMode="root"/>
       <!-- non-p2: <feature id="AnyEditTools" installMode="root"/> -->
       <!-- <feature id="dakara.eclipse.commander.feature" installMode="root"/> -->
       <feature id="de.jcup.batcheditor" installMode="root"/>
@@ -73,14 +74,17 @@
       <feature id="org.eclipse.buildship" installMode="root"/>
       <feature id="com.github.spotbugs.plugin.eclipse" installMode="root"/>
 
-      <!-- Java 17 (BETA)
-      <feature id="org.eclipse.jdt.java17patch" installMode="root"/>
-      <feature id="org.eclipse.jdt.java17patch.source" installMode="root"/>
-      <feature id="org.eclipse.pde.java17patch" installMode="root"/>
-      <feature id="org.eclipse.pde.java17patch.source" installMode="root"/>
+      <!-- Java 19 (BETA)
+      <feature id="org.eclipse.jdt.java19patch" installMode="root"/>
+      <feature id="org.eclipse.jdt.java19patch.source" installMode="root"/>
+      <feature id="org.eclipse.pde.java19patch" installMode="root"/>
+      <feature id="org.eclipse.pde.java19patch.source" installMode="root"/>
       -->
 
-      <!-- sources for Plug-in Development Environment (PDE) -->
+      <!-- Plug-in Development Environment (PDE) and sources -->
+      <feature id="org.eclipse.pde" installMode="root"/>
+      <feature id="org.eclipse.m2e.pde.feature" installMode="root"/>
+      <feature id="org.eclipse.e4.core.tools.feature" installMode="root"/>
       <feature id="org.eclipse.platform.source" installMode="root"/>
       <feature id="org.eclipse.rcp.source" installMode="root"/>
       <feature id="org.eclipse.jdt.source" installMode="root"/>
