@@ -35,12 +35,18 @@
                                     <url>https://raw.githubusercontent.com/iloveeclipse/plugins/latest</url>
                                 </repository>
                                 <repository>
+                                    <url>https://zipeditor.sourceforge.net/update</url>
+                                </repository>
+                                <repository>
                                     <url>http://dadacoalition.org/yedit</url>
                                 </repository>
                             </source>
                             <ius>
                                 <iu>
                                     <id>AnyEditTools.feature.group</id>
+                                </iu>
+                                <iu>
+                                    <id>zipeditor.feature.group</id>
                                 </iu>
                                 <iu>
                                     <id>org.dadacoalition.yedit.feature.feature.group</id>
