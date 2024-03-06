@@ -56,7 +56,7 @@
       <!-- Git + SVN -->
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.team.svn" installMode="root"/>
-      <feature id="org.polarion.eclipse.team.svn.connector.svnkit18" installMode="root"/>
+      <feature id="org.polarion.eclipse.team.svn.connector.svnkit1_10" installMode="root"/>
 
       <!-- Mylyn + connectors -->
       <feature id="org.eclipse.mylyn_feature" installMode="root"/>

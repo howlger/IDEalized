@@ -55,11 +55,11 @@
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.team.svn.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/technology/subversive/4.0/update-site"/>
+            <repository location="https://download.eclipse.org/technology/subversive/4.8/release/latest/"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.polarion.eclipse.team.svn.connector.svnkit18.feature.group" version="0.0.0"/>
-            <repository location="https://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site"/>
+            <unit id="org.polarion.eclipse.team.svn.connector.svnkit1_10.feature.group" version="0.0.0"/>
+            <repository location="https://osspit.org/eclipse/subversive-connectors"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="nu.psnet.quickimage.feature.group" version="0.0.0"/>
