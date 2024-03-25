@@ -4,8 +4,8 @@ addRepository(type:0,location:https${#58}//download.eclipse.org/eclipse/updates/
 addRepository(type:1,location:https${#58}//download.eclipse.org/eclipse/updates/latest,name:Eclipse Project Latest,enabled:true);\
 addRepository(type:0,location:https${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
 addRepository(type:1,location:https${#58}//download.eclipse.org/releases/latest,name:Eclipse Latest Simultaneous Releases,enabled:true);\
-addRepository(type:0,location:https${#58}//raw.githubusercontent.com/Nodeclipse/quickimage/master/quickimage-updatesite,name:QuickImage,enabled:true);\
-addRepository(type:1,location:https${#58}//raw.githubusercontent.com/Nodeclipse/quickimage/master/quickimage-updatesite,name:QuickImage,enabled:true);\
+addRepository(type:0,location:https${#58}//gnl42.github.io/QuickImage2-update,name:QuickImage,enabled:true);\
+addRepository(type:1,location:https${#58}//gnl42.github.io/QuickImage2-update,name:QuickImage,enabled:true);\
 addRepository(type:0,location:https${#58}//raw.githubusercontent.com/iloveeclipse/plugins/latest,name:AnyEdit Tools,enabled:true);\
 addRepository(type:1,location:https${#58}//raw.githubusercontent.com/iloveeclipse/plugins/latest,name:AnyEdit Tools,enabled:true);\
 addRepository(type:0,location:https${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
