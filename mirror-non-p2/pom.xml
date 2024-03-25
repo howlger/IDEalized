@@ -13,7 +13,7 @@
     </parent>
     <properties>
 
-		<!-- stick to Tycho 3.x, since mirroring of an old-style update site fails with Tycho 4.x -->
+        <!-- stick to Tycho 3.x, since mirroring of an old-style update site fails with Tycho 4.x -->
         <tycho-version>3.0.5</tycho-version>
 
     </properties>
