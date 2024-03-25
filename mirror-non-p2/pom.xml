@@ -12,7 +12,10 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <properties>
-        <tycho-version>4.0.4</tycho-version>
+
+		<!-- stick to Tycho 3.x, since mirroring of an old-style update site fails with Tycho 4.x -->
+        <tycho-version>3.0.5</tycho-version>
+
     </properties>
     <build>
         <plugins>

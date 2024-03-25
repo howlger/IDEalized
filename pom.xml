@@ -10,7 +10,6 @@
 
         <!-- Tycho version (<https://github.com/eclipse/tycho/blob/master/RELEASE_NOTES.md>) specified in:
              - .mvn/extensions.xml
-             - mirror-non-p2/pom.xml
              - and here: -->
         <tycho-version>4.0.4</tycho-version>
 
