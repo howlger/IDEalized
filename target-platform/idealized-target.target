@@ -23,7 +23,7 @@
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.wikitext_feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.wikitext.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
