@@ -26,8 +26,11 @@ jobs:
       uses: stCarolas/setup-maven@v5
       with:
         maven-version: 3.9.6
-    - name: Build with Maven
-      run: mvn -V -ntp -fae clean verify
+    - name: Mirror old-style update sites
+      working-directory: ./mirror-non-p2
+      run: mvn clean verify
+    - name: Build IDEalized with Maven/Tycho
+      run: mvn clean verify
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:

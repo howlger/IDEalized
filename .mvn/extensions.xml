@@ -2,6 +2,9 @@
     <extension>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-build</artifactId>
-        <version>4.0.6</version>
+
+        <!-- Tycho version see: .mvn/maven.config -->
+        <version>${tycho-version}</version>
+
     </extension>
 </extensions>
