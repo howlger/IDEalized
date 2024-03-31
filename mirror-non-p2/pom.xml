@@ -2,9 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>idealized</groupId>
     <artifactId>non-p2_update_sites</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>idealized</groupId>
@@ -13,7 +11,7 @@
     </parent>
     <properties>
 
-        <!-- stick to Tycho 3.x, since mirroring of an old-style update site fails with Tycho 4.x -->
+        <!-- use Tycho 3.0.5, as mirroring of old-style update sites is no longer supported since 4.0.0 -->
         <tycho-version>3.0.5</tycho-version>
 
     </properties>
@@ -25,7 +23,7 @@
                 <version>${tycho-version}</version>
                 <executions>
 
-                    <!-- step 1: mirror old-style update site -->
+                    <!-- step 1: mirror old-style update site as p2 repository: /target/repository -->
                     <execution>
                         <id>mirror-update-sites</id>
                         <phase>process-resources</phase>
@@ -59,8 +57,9 @@
                         </configuration>
                     </execution>
 
-                    <!-- step 3: generate the full p2 metadata for the mirrored
-                        artifacts -->
+                    <!-- step 2: see below (via maven-antrun-plugin) -->
+
+                    <!-- step 3: regenerate the full p2 metadata for the mirrored artifacts -->
                     <execution>
                         <id>generate-full-metadata</id>
                         <phase>compile</phase>
@@ -82,8 +81,9 @@
                 <version>3.1.0</version>
                 <executions>
 
-                    <!-- step 2: strip the p2 metadata that contains the "partial IUs"
-                         that which be used for dependency resolution in Tycho -->
+                    <!-- step 2:
+                         - strip all p2 metadata containing partial IUs
+                         - in product and target, enable and redirect features to the local mirror -->
                     <execution>
                         <id>remove-incomplete-metadata</id>
                         <phase>process-resources</phase>
@@ -99,7 +99,7 @@
                                 <makeurl property="non-p2.mirror.url" file="${project.build.directory}/repository"/>
                                 <replaceregexp file="${project.basedir}/../target-platform\idealized-target.target"
                                     match="&lt;!-[-]\s*+non-p2:\s*+((?:(?!&lt;repository)[\s\S])++&lt;repository\s++location\s*+=\s*+&quot;)[^&quot;]++(&quot;(?:(?!-[-])[\s\S])++)[-]->"
-                                    byline="no" flags="gi"  replace="\1${non-p2.mirror.url}\2"/>
+                                    byline="no" flags="gi" replace="\1${non-p2.mirror.url}\2"/>
                             </target>
                         </configuration>
                     </execution>
