@@ -16,16 +16,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 17
+    - name: Set up Java
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: '21'
         distribution: 'adopt'
         cache: maven
     - name: Set up Maven
       uses: stCarolas/setup-maven@v5
       with:
-        maven-version: 3.9.6
+        maven-version: 3.9.7
     - name: Mirror old-style update sites
       working-directory: ./mirror-non-p2
       run: mvn clean verify
