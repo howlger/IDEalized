@@ -12,6 +12,7 @@
              .mvn/maven.config -->
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tycho.scmUrl>scm:git:https://github.com/howlger/IDEalized</tycho.scmUrl>
     </properties>
     <modules>
         <module>target-platform</module>

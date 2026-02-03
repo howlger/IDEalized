@@ -5,31 +5,26 @@
             <unit id="org.eclipse.equinox.sdk.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
             <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.platform.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.rcp.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.jdt.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.source.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.jdt.bcoview.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.pde.spies.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.swt.tools.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.e4.core.tools.feature.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/latest"/>
-        </location>
-        <!-- Java 19 support (BETA)
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.jdt.java19patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.jdt.java19patch.source.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java19patch.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.pde.java19patch.source.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/eclipse/updates/4.25-P-builds"/>
-        </location> -->
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.epp.mpc.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.oomph.setup.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.wikitext.feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.egit.gitflow.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.jgit.http.apache.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.terminal.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.m2e.pde.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.m2e.lemminx.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.buildship.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.tm4e.language_pack.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.xml_ui.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wst.xsl.feature.feature.group" version="0.0.0"/>
@@ -37,21 +32,17 @@
             <unit id="org.eclipse.wildwebdeveloper.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.wildwebdeveloper.embedder.node.feature.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.oomph.targlets.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.commons.activity.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.jdt.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.pde.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.egit.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.ide.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.git.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.github.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.jenkins.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.reviews.feature.feature.group" version="0.0.0"/>
+            <unit id="org.eclipse.mylyn.wikitext.feature.feature.group" version="0.0.0"/>
             <repository location="https://download.eclipse.org/releases/latest"/>
-        </location>
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/egit/updates"/>
-        </location>
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.mylyn_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.hudson.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.bugzilla_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.java_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.pde_feature.feature.group" version="0.0.0"/>
-            <unit id="org.eclipse.mylyn.git.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/mylyn/releases/latest"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.eclipse.team.svn.feature.group" version="0.0.0"/>
@@ -95,7 +86,7 @@
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="net.resheim.eclipse.timekeeper.feature.group" version="0.0.0"/>
-            <repository location="https://resheim.net/p2/eclipse-timekeeper"/>
+            <repository location="https://timekeeper.solution42.cz/timekeeper/release/latest/"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="com.github.spotbugs.plugin.eclipse.feature.group" version="0.0.0"/>

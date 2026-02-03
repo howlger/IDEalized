@@ -6,9 +6,21 @@
    <configIni use="default"/>
 
    <launcherArgs>
-      <programArgs>--launcher.defaultAction openFile --launcher.appendVmargs
+      <programArgs>-product org.idealized.customization.product
+-showsplash org.eclipse.epp.package.common
+--launcher.defaultAction openFile
+--launcher.appendVmargs
       </programArgs>
-      <vmArgs>-Xms256m -Xmx1024m -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM -Dosgi.requiredJavaVersion=11 -Dosgi.dataAreaRequiresExplicitInit=true -Declipse.p2.unsignedPolicy=allow -Dorg.eclipse.ecf.provider.filetransfer.retrieve.closeTimeout=4200 -Dorg.eclipse.ecf.provider.filetransfer.retrieve.readTimeout=4200
+      <vmArgs>-Dosgi.requiredJavaVersion=21
+-Dosgi.dataAreaRequiresExplicitInit=true
+-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false
+-Declipse.e4.inject.javax.warning=false
+-Dorg.slf4j.simpleLogger.defaultLogLevel=off
+-Dsun.java.command=Eclipse
+-Declipse.platform.mergeTrust=true
+-XX:+UseG1GC
+-XX:+UseStringDeduplication
+--add-modules=ALL-SYSTEM
       </vmArgs>
       <vmArgsMac>-Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -17,7 +29,13 @@
    <splash location="org.idealized.customization" />
    <launcher name="idealized">
       <linux icon="icons/linux.xpm"/>
-      <macosx icon="icons/macos.icns"/>
+      <macosx icon="icons/macos.icns">
+         <bundleUrlTypes>
+            <bundleUrlType scheme="eclipse+command" name="Eclipse Command"/>
+            <!-- include the additional handler for mpc - this needs to be defined here so macOS entitlements work properly -->
+            <bundleUrlType scheme="eclipse+mpc" name="Eclipse Marketplace"/>
+         </bundleUrlTypes>
+      </macosx>
       <win useIco="true">
          <ico path="icons/windows.ico"/>
          <bmp/>
@@ -35,10 +53,14 @@
       <feature id="org.eclipse.equinox.p2.user.ui"/>
       <feature id="org.idealized.feature" installMode="root"/>
 
-      <!-- Eclipse Marketplace Client -->
+      <!-- Eclipse Marketplace Client and Oomph Setup -->
       <feature id="org.eclipse.epp.mpc" installMode="root"/>
+      <feature id="org.eclipse.oomph.setup" installMode="root"/>
 
-      <!-- general IDE -->
+      <!-- General IDE -->
+      <feature id="org.eclipse.tm4e.feature" installMode="root"/>
+      <feature id="org.eclipse.tm4e.language_pack.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.lemminx.feature" installMode="root"/>
       <feature id="org.eclipse.tips.feature" installMode="root"/>
       <feature id="me.glindholm.plugin.quickimage2.feature" installMode="root"/>
       <!-- non-p2: <feature id="AnyEditTools" installMode="root"/> -->
@@ -48,48 +70,44 @@
       <feature id="de.jcup.basheditor" installMode="root"/>
       <feature id="net.sourceforge.javahexeditor" installMode="root"/>
       <feature id="org.eclipse.mylyn.wikitext.feature" installMode="root"/>
-      <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
+      <feature id="org.eclipse.terminal.feature" installMode="root"/>
       <!-- non-p2: <feature id="org.dadacoalition.yedit.feature" installMode="root"/> -->
       <feature id="de.jcup.jenkinseditor.feature" installMode="root"/>
-      <feature id="org.eclipse.tm4e.feature" installMode="root"/>
 
       <!-- Git + SVN -->
       <feature id="org.eclipse.egit" installMode="root"/>
+      <feature id="org.eclipse.jgit.http.apache" installMode="root"/>
+      <feature id="org.eclipse.egit.gitflow.feature" installMode="root"/>
       <feature id="org.eclipse.team.svn" installMode="root"/>
       <feature id="org.polarion.eclipse.team.svn.connector.svnkit1_10" installMode="root"/>
 
       <!-- Mylyn + connectors -->
-      <feature id="org.eclipse.mylyn_feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.commons.activity.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.egit.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.ide.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.git.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.github.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.jenkins.feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.reviews.feature" installMode="root"/>
       <feature id="net.resheim.eclipse.timekeeper" installMode="root"/>
-      <feature id="org.eclipse.mylyn.hudson" installMode="root"/>
-      <feature id="org.eclipse.mylyn.bugzilla_feature" installMode="root"/>
-      <feature id="org.eclipse.mylyn.ide_feature" installMode="root"/>
-      <feature id="org.eclipse.mylyn.java_feature" installMode="root"/>
-      <feature id="org.eclipse.mylyn.pde_feature" installMode="root"/>
-      <feature id="org.eclipse.mylyn.git" installMode="root"/>
 
       <!-- Java -->
       <feature id="org.eclipse.jdt" installMode="root"/>
+      <feature id="org.eclipse.jdt.bcoview.feature" installMode="root"/>
       <feature id="org.eclipse.eclemma.feature" installMode="root"/>
       <feature id="org.eclipse.m2e.feature" installMode="root"/>
       <feature id="org.eclipse.buildship" installMode="root"/>
+      <feature id="org.eclipse.mylyn.jdt.feature" installMode="root"/>
       <feature id="com.github.spotbugs.plugin.eclipse" installMode="root"/>
-
-      <!-- Java 19 (BETA)
-      <feature id="org.eclipse.jdt.java19patch" installMode="root"/>
-      <feature id="org.eclipse.jdt.java19patch.source" installMode="root"/>
-      <feature id="org.eclipse.pde.java19patch" installMode="root"/>
-      <feature id="org.eclipse.pde.java19patch.source" installMode="root"/>
-      -->
 
       <!-- Plug-in Development Environment (PDE) and sources -->
       <feature id="org.eclipse.pde" installMode="root"/>
+      <feature id="org.eclipse.pde.spies" installMode="root"/>
       <feature id="org.eclipse.m2e.pde.feature" installMode="root"/>
       <feature id="org.eclipse.e4.core.tools.feature" installMode="root"/>
-      <feature id="org.eclipse.platform.source" installMode="root"/>
-      <feature id="org.eclipse.rcp.source" installMode="root"/>
-      <feature id="org.eclipse.jdt.source" installMode="root"/>
-      <feature id="org.eclipse.pde.source" installMode="root"/>
+      <feature id="org.eclipse.swt.tools.feature" installMode="root"/>
+      <feature id="org.eclipse.rcp" installMode="root"/>
+      <feature id="org.eclipse.mylyn.pde.feature" installMode="root"/>
 
       <!-- misc: "Repository Explorer" view -->
       <feature id="org.eclipse.oomph.targlets" installMode="root"/>

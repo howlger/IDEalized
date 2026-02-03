@@ -12,9 +12,9 @@
     <properties>
         <add-jre>yes</add-jre>
         <add-jre.jdk>yes</add-jre.jdk>
-        <add-jre.version>21</add-jre.version>
+        <add-jre.version>25</add-jre.version>
         <nsis>yes</nsis>
-        <nsis.version>3.09</nsis.version>
+        <nsis.version>3.11</nsis.version>
     </properties>
     <build>
         <plugins>
@@ -72,7 +72,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${maven-antrun-plugin-version}</version>
                 <executions>
                     <execution>
                         <id>product-post-processing</id>
@@ -88,7 +88,7 @@
                                 <!-- JREs cache: ${settings.localRepository}/.cache/JREs -->
                                 <condition property="skip.add-jre"><isfalse value="${add-jre}"/></condition>
                                 <sequential xmlns:unless="ant:unless" unless:set="skip.add-jre">
-                                    <property name="add-jre.version" value="21"/><!-- default: Java 21 -->
+                                    <property name="add-jre.version" value="25"/><!-- default: Java 25 -->
                                     <condition property="add-jre.type" value="jre" else="jdk"><!-- default: JRE, not JDK -->
                                         <isfalse value="${add-jre.jdk}"/>
                                     </condition>
