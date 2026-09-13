@@ -87,7 +87,7 @@
       <feature id="org.eclipse.mylyn.github.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.jenkins.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.reviews.feature" installMode="root"/>
-      <feature id="net.resheim.eclipse.timekeeper" installMode="root"/>
+      <!-- <feature id="net.resheim.eclipse.timekeeper" installMode="root"/> -->
 
       <!-- Java -->
       <feature id="org.eclipse.jdt" installMode="root"/>
