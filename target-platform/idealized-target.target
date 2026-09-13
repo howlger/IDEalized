@@ -52,10 +52,14 @@
             <unit id="AnyEditTools.feature.group" version="0.0.0"/>
             <repository location="https://raw.githubusercontent.com/iloveeclipse/plugins/latest"/>
         </location> -->
-        <!-- non-p2: <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="zipeditor.feature.group" version="0.0.0"/>
-            <repository location="https://zipeditor.sourceforge.net/update"/>
-        </location> -->
+
+            <!-- Composite update site, containing with "legacy/" a non-p2 update site;
+                 so manually update to latest child update site in: https://zipeditor.sourceforge.net/update/compositeContent.xml -->
+            <repository location="https://zipeditor.sourceforge.net/update/1.2.0/"/>
+
+        </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="de.jcup.batcheditor.feature.group" version="0.0.0"/>
             <repository location="https://de-jcup.github.io/update-site-eclipse-batch-editor/update-site"/>
