@@ -78,8 +78,8 @@
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.jgit.http.apache" installMode="root"/>
       <feature id="org.eclipse.egit.gitflow.feature" installMode="root"/>
-      <feature id="org.eclipse.team.svn" installMode="root"/>
-      <feature id="org.polarion.eclipse.team.svn.connector.svnkit1_10" installMode="root"/>
+      <feature id="org.eclipse.team.svn.feature" installMode="root"/>
+      <feature id="ru.arsysop.svn.connectors.svnkit1_10.feature" installMode="root"/>
 
       <!-- Mylyn + connectors -->
       <feature id="org.eclipse.mylyn.commons.activity.feature" installMode="root"/>
