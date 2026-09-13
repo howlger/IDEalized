@@ -45,14 +45,6 @@
             <repository location="https://download.eclipse.org/releases/latest"/>
         </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="org.eclipse.team.svn.feature.feature.group" version="0.0.0"/>
-            <repository location="https://download.eclipse.org/technology/subversive/updates/nightly/latest/"/>
-        </location>
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <unit id="ru.arsysop.svn.connectors.svnkit1_10.feature.feature.group" version="0.0.0"/>
-            <repository location="https://arsysop.github.io/svn/release/"/>
-        </location>
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="me.glindholm.plugin.quickimage2.feature.feature.group" version="0.0.0"/>
             <repository location="https://gnl42.github.io/QuickImage2-update"/>
         </location>

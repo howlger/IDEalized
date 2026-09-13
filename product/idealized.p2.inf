@@ -10,10 +10,6 @@ addRepository(type:0,location:https${#58}//raw.githubusercontent.com/iloveeclips
 addRepository(type:1,location:https${#58}//raw.githubusercontent.com/iloveeclipse/plugins/latest,name:AnyEdit Tools,enabled:true);\
 addRepository(type:0,location:https${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
 addRepository(type:1,location:https${#58}//download.eclipse.org/egit/updates,name:Eclipse EGit/JGit,enabled:true);\
-addRepository(type:0,location:https${#58}//download.eclipse.org/technology/subversive/updates/nightly/latest/,name:SVN - Eclipse Subversive,enabled:true);\
-addRepository(type:1,location:https${#58}//download.eclipse.org/technology/subversive/updates/nightly/latest/,name:SVN - Eclipse Subversive,enabled:true);\
-addRepository(type:0,location:https${#58}//arsysop.github.io/svn/release/,name:SVN - Subversive Connectors (Polarion),enabled:true);\
-addRepository(type:1,location:https${#58}//arsysop.github.io/svn/release/,name:SVN - Subversive Connectors (Polarion),enabled:true);\
 addRepository(type:0,location:https${#58}//de-jcup.github.io/update-site-eclipse-batch-editor/update-site,name:Batch Editor,enabled:true);\
 addRepository(type:1,location:https${#58}//de-jcup.github.io/update-site-eclipse-batch-editor/update-site,name:Batch Editor,enabled:true);\
 addRepository(type:0,location:https${#58}//de-jcup.github.io/update-site-eclipse-bash-editor/update-site,name:Bash Editor,enabled:true);\

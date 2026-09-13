@@ -74,12 +74,10 @@
       <!-- non-p2: <feature id="org.dadacoalition.yedit.feature" installMode="root"/> -->
       <feature id="de.jcup.jenkinseditor.feature" installMode="root"/>
 
-      <!-- Git + SVN -->
+      <!-- Git -->
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.jgit.http.apache" installMode="root"/>
       <feature id="org.eclipse.egit.gitflow.feature" installMode="root"/>
-      <feature id="org.eclipse.team.svn.feature" installMode="root"/>
-      <feature id="ru.arsysop.svn.connectors.svnkit1_10.feature" installMode="root"/>
 
       <!-- Mylyn + connectors -->
       <feature id="org.eclipse.mylyn.commons.activity.feature" installMode="root"/>
