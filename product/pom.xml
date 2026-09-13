@@ -14,7 +14,7 @@
         <add-jre.jdk>yes</add-jre.jdk>
         <add-jre.version>25</add-jre.version>
         <nsis>yes</nsis>
-        <nsis.version>3.11</nsis.version>
+        <nsis.version>3.12</nsis.version>
     </properties>
     <build>
         <plugins>
